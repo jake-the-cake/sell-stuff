@@ -1,4 +1,9 @@
+:root {
+  --not-white: #ededed;
+}
+
 body {
+  background-color: var(--not-white);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +15,109 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.page-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.site-logo {
+  color: var(--not-white);
+  font-family: 'Ruslan Display', cursive;
+  font-size: 1.9rem;
+  padding: .5rem 1rem;
+  margin-bottom: -.2em;
+}
+
+/*
+  ::: NAVBAR ( Mobile Only )
+*/
+.navbar-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.navbar-user {
+  padding: .5rem 0rem;
+}
+
+.navbar-sandwich {
+  padding: .5rem 1rem;
+}
+
+.navbar-sandwich:hover > .navbar-sandwich-outline {
+  background-color: rgba(255,255,255,.1);
+  cursor: pointer;
+}
+
+.navbar-sandwich-outline {
+  align-items: center;
+  border: 2px solid var(--not-white);
+  border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  height: 3rem;
+  justify-content: center;
+  padding: 0px .4rem;
+  width: 3rem;
+  background-color: rgba(0,0,0,.2);
+}
+
+.navbar-sandwich-line {
+  background-color: var(--not-white);
+  height: 3px;
+  width: 100%;
+}
+
+/*
+  ::: SIDEBAR ( Desktop Only )
+*/
+.sidebar-container {
+  display: none;
+  height: 100%;
+  left: 0px;
+  max-width: 400px;
+  position: absolute;
+  top: 0px;
+  width: 30vw;
+}
+
+/*
+  ::: CONTENT
+*/
+.content-container {}
+
+/*
+  ::: FOOTER
+*/
+.footer-container {}
+
+/*
+  ::: RESPONSIVE
+*/
+@media only screen and (min-width: 750px) {
+  .site-logo {
+    margin: 0px auto;
+    padding: .5rem 0px;
+  }
+  
+  .navbar-container {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: flex;
+  }
 }
