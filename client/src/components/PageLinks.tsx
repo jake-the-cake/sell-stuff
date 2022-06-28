@@ -38,7 +38,7 @@ export const PageLinks:React.FC<PageLinkProps> = (props: PageLinkProps) => {
 					<Link
 						key={link.name}
 						className="text-decoration-none"
-						onClick={slide}
+						onClick={props.view === 'top' ? slide : ()=>{return false}}
 						to={link.url}
 					>
 						<div className={`link-cell-${props.view}${link.isActive ? ' active-link' : ''}`} >

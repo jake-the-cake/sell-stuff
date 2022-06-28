@@ -167,7 +167,9 @@ code {
 /*
   ::: FOOTER
 */
-.footer-container {}
+.footer-container {
+  display: flex;
+}
 
 /*
   ::: RESPONSIVE
