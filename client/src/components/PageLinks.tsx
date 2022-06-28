@@ -28,6 +28,12 @@ const linkData:LinkData = [
 		name: 'browse',
 		url: '/sell-stuff/browse'
 	},
+	{
+		display:'View Cart',
+		isActive: false,
+		name: 'cart',
+		url: '/sell-stuff/cart'
+	},
 ]
 
 export const PageLinks:React.FC<PageLinkProps> = (props: PageLinkProps) => {

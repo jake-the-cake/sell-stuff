@@ -2,6 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar } from './components/Navbar'
 import { Sidebar } from './components/Sidebar'
+import { Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
 
 function App() {
   const renderLogo:()=>JSX.Element = () => {
@@ -10,11 +12,13 @@ function App() {
 
   return (
     <div className="page-container">
-      <Navbar logo={renderLogo()} />
-      <Sidebar logo={renderLogo()} />
-      <div className="content-container">
-        Content
-      </div>
+        <Navbar logo={renderLogo()} />
+        <Sidebar logo={renderLogo()} />
+        <div className="content-container">
+        <Routes>
+          <Route path='/sell-stuff' element={<Home />} />
+        </Routes>
+        </div>
     </div>
   )
 }
