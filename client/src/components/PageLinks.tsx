@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { slide } from "../functions/animations/slideMenu"
 
 interface PageLinkProps {
 	view: string,
+	animation?: ()=>void | undefined,
 }
 
 type LinkData = {
@@ -18,13 +20,13 @@ const linkData:LinkData = [
 		display:'Return Home',
 		isActive: false,
 		name: 'home',
-		url: '/'
+		url: '/sell-stuff'
 	},
 	{
 		display:'Browse Items',
 		isActive: false,
 		name: 'browse',
-		url: '/browse'
+		url: '/sell-stuff/browse'
 	},
 ]
 
@@ -33,9 +35,16 @@ export const PageLinks:React.FC<PageLinkProps> = (props: PageLinkProps) => {
 		<div id={`links-${props.view}`} className={`link-container link-${props.view}`}>
 			{linkData.map(link => {
 				return (
-					<div key={link.name} className={`link-cell-${props.view}${link.isActive ? ' active-link' : ''}`} >
-						<Link className='link-style' to={link.url}>{link.display}</Link>
-					</div>
+					<Link
+						key={link.name}
+						className="text-decoration-none"
+						onClick={slide}
+						to={link.url}
+					>
+						<div className={`link-cell-${props.view}${link.isActive ? ' active-link' : ''}`} >
+							<span className="link-style">{link.display}</span>
+						</div>
+					</Link>
 				)
 			})}
 		</div>

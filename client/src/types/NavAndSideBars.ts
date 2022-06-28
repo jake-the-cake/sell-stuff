@@ -1,3 +1,3 @@
-export interface BarProps {
+export type BarProps = {
 	logo?: JSX.Element,
 }

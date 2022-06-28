@@ -108,7 +108,7 @@ code {
 .link-container {
   display: flex;
   flex-direction: column;
-  padding: 0px 1rem;
+  padding: 50px 1rem 0px;
   position: relative;
   outline: none;
 }
@@ -133,6 +133,7 @@ code {
 .link-style {
   color: var(--not-white);
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .link-cell-side {
