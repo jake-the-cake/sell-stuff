@@ -159,9 +159,51 @@ code {
   ::: CONTENT
 */
 .content-container {
-  padding-top: 60px;
   display: flex;
+  padding-top: 60px;
   width: 100%;
+}
+
+/*
+  ::: HOMEPAGE
+*/
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+/*
+  ::: QUICK TOOLS
+*/
+.quick-tools-block {
+  border: 1px solid rgba(0,0,0,.2);
+  margin-top: 1rem;
+  background-color: #f0e1e1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 1rem 1rem;
+  position: relative;
+  box-shadow: 0px 4px 8px -2px #373737;
+}
+
+.quick-tools-title {
+  left: 1.4rem;
+  position: absolute;
+  top: -1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: #373737;
+  padding: .4rem .6rem .1rem;
+  /* border-radius: .8rem; */
+  border: 1px solid #dc3545;
+  color: var(--not-white);
+  line-height: 1rem;
+  font-family: 'Ruslan Display', cursive;
+  /* text-shadow: 1px 1px #dc3545, -1px 1px #dc3545, -1px -1px #dc3545, 1px -1px #dc3545; */
 }
 
 /*

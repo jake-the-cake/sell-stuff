@@ -16,7 +16,7 @@ function App() {
         <Sidebar logo={renderLogo()} />
         <div className="content-container">
         <Routes>
-          <Route path='/sell-stuff' element={<Home />} />
+          <Route path='/sell-stuff' element={<Home title="Home" />} />
         </Routes>
         </div>
     </div>

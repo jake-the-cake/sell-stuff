@@ -1,40 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { linkData } from "../data/links"
 import { slide } from "../functions/animations/slideMenu"
 
 interface PageLinkProps {
 	view: string,
 	animation?: ()=>void | undefined,
 }
-
-type LinkData = {
-	display: string,
-	isActive: boolean,
-	name: string,
-	target?: string,
-	url: string
-}[]
-
-const linkData:LinkData = [
-	{
-		display:'Return Home',
-		isActive: false,
-		name: 'home',
-		url: '/sell-stuff'
-	},
-	{
-		display:'Browse Items',
-		isActive: false,
-		name: 'browse',
-		url: '/sell-stuff/browse'
-	},
-	{
-		display:'View Cart',
-		isActive: false,
-		name: 'cart',
-		url: '/sell-stuff/cart'
-	},
-]
 
 export const PageLinks:React.FC<PageLinkProps> = (props: PageLinkProps) => {
  	return (
