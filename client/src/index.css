@@ -181,6 +181,7 @@ code {
 .quick-tools-block {
   border: 1px solid rgba(0,0,0,.2);
   margin-top: 1rem;
+  margin-bottom: 0px;
   background-color: #f0e1e1;
   display: flex;
   justify-content: space-between;
@@ -188,6 +189,9 @@ code {
   padding: 2rem 1rem 1rem;
   position: relative;
   box-shadow: 0px 4px 8px -2px #373737;
+  height: auto;
+  opacity: 1;
+  transition: height .5s ease, opacity .7s ease, padding .5s ease, margin-top .5s ease, margin-bottom .5s ease;
 }
 
 .quick-tools-title {
@@ -198,12 +202,23 @@ code {
   text-transform: uppercase;
   background-color: #373737;
   padding: .4rem .6rem .1rem;
-  /* border-radius: .8rem; */
   border: 1px solid #dc3545;
   color: var(--not-white);
   line-height: 1rem;
   font-family: 'Ruslan Display', cursive;
-  /* text-shadow: 1px 1px #dc3545, -1px 1px #dc3545, -1px -1px #dc3545, 1px -1px #dc3545; */
+}
+
+.quick-tools-hide {
+  position: absolute;
+  top: -1.2rem;
+  right: 0px;
+  font-size: .7rem;
+  color: #3737ed;
+  cursor: pointer;
+}
+
+.quick-tools-hide:hover {
+  color: #1616da;
 }
 
 /*
