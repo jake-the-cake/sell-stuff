@@ -14,12 +14,6 @@ export const linkData:LinkData = [
 		url: '/sell-stuff'
 	},
 	{
-		display:'Browse Items',
-		isActive: false,
-		name: 'browse',
-		url: '/sell-stuff/browse'
-	},
-	{
 		display:'View Cart',
 		isActive: false,
 		name: 'cart',
@@ -34,7 +28,7 @@ export const linkData:LinkData = [
 	{
 		display:'Item List',
 		isActive: false,
-		name: 'items',
-		url: '/sell-stuff/items'
+		name: 'browse',
+		url: '/sell-stuff/browse'
 	},
 ]
