@@ -10,22 +10,20 @@ interface ItemProps {
 	}
 }
 
-let input = document.getElementById('selector-quantity') as HTMLInputElement
+
 export const Item: FC<ItemProps> = ({title, display}) => {
 	let variable = display.name
 	pageTitle(title.replace("''",`'${variable}'`))
 
-	const quantityInput = document.getElementById('selector-quantity') as HTMLInputElement
-
 	const handleUpClick = () => {
-		const temp = String(Number(quantityInput.value) + 1)
+		const quantityInput = document.getElementById('selector-quantity') as HTMLInputElement
 		if (quantityInput !== null) {
 			quantityInput.value = String(1 + Number(quantityInput.value))
 		}
 	}
 
 	const handleDownClick = () => {
-		const temp = String(Number(quantityInput.value) + 1)
+		const quantityInput = document.getElementById('selector-quantity') as HTMLInputElement
 		if (quantityInput !== null && Number(quantityInput.value) > 1) {
 			quantityInput.value = String(Number(quantityInput.value) - 1)
 		}
