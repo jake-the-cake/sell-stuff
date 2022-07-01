@@ -15,9 +15,12 @@ export const Home: FC<HomeProps> = ({title}) => {
 		box!.style.height = '0px'
 		box!.style.padding = '0px'
 		box!.style.opacity = '0'
-		box!.style.overflow = 'hidden'
 		box!.style.marginTop = '0px'
 		box!.style.marginBottom = '-1rem'
+		const hideHide = box!.children[box!.children.length - 1] as HTMLElement
+		const hideBox =	box!.children[box!.children.length - 2] as HTMLElement
+		hideHide.style.top = '10px'
+		hideBox.style.top = '10px'
 	}
 
 	const iconStyle = {
