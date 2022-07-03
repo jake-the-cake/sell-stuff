@@ -125,8 +125,9 @@ code {
   right: 0px;
   bottom: calc(100% + 2px);
   min-width: 60vw;
+  height: fit-content;
   z-index: 10;
-  transition: bottom .3s ease;
+  transition: top .3s ease;
 }
 
 .link-style {
@@ -287,7 +288,7 @@ code {
   box-shadow: 0px 4px 8px -2px #373737;
   height: auto;
   opacity: 1;
-  transition: height .5s ease, opacity .5s ease, padding .5s ease, margin-top .5s ease, margin-bottom .5s ease;
+  transition: height .5s ease, opacity .7s ease, padding .5s ease, margin-top .5s ease, margin-bottom .5s ease;
 }
 
 .quick-tools-title {
@@ -302,7 +303,7 @@ code {
   color: var(--not-white);
   line-height: 1rem;
   font-family: 'Ruslan Display', cursive;
-  transition: top .5s ease;
+  transition: top .5s linear, height .5s ease, opacity .5s ease, padding .5s ease;
 }
 
 .quick-tools-hide {
@@ -313,6 +314,7 @@ code {
   color: #3737ed;
   transition: top .5s ease;
   cursor: pointer;
+  transition: top .5s linear, height .5s ease, opacity .5s ease, padding .5s ease;
 }
 
 .quick-tools-hide:hover {
@@ -371,5 +373,19 @@ code {
 
   .item-title {
     font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width:350px) {
+  .site-logo {
+    font-size: 1.4rem;
+  }
+
+  .quick-tools-title {
+    font-size: .8rem;
+  }
+
+  .quick-tools-hide {
+    font-size: .7rem;
   }
 }

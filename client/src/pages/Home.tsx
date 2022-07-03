@@ -20,7 +20,11 @@ export const Home: FC<HomeProps> = ({title}) => {
 		const hideHide = box!.children[box!.children.length - 1] as HTMLElement
 		const hideBox =	box!.children[box!.children.length - 2] as HTMLElement
 		hideHide.style.top = '10px'
+		hideHide.style.height = '0px'
+		hideHide.style.padding = '0px'
 		hideBox.style.top = '10px'
+		hideBox.style.height = '0px'
+		hideBox.style.padding = '0px'
 	}
 
 	const iconStyle = {
