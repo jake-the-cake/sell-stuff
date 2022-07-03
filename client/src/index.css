@@ -1,5 +1,6 @@
 :root {
   --not-white: #ededed;
+  --danger-red: #dc3545;
   --sidebar-width: 360px;
 }
 
@@ -118,8 +119,8 @@ code {
 
 .link-top {
   background-color: #a33;
-  border-bottom: 3px solid #dc3545;
-  border-left: 3px solid #dc3545;
+  border-bottom: 3px solid var(--danger-red);
+  border-left: 3px solid var(--danger-red);
   padding: 0px;
   position: absolute;
   right: 0px;
@@ -299,7 +300,7 @@ code {
   text-transform: uppercase;
   background-color: #373737;
   padding: .4rem .6rem .1rem;
-  border: 1px solid #dc3545;
+  border: 1px solid var(--danger-red);
   color: var(--not-white);
   line-height: 1rem;
   font-family: 'Ruslan Display', cursive;
