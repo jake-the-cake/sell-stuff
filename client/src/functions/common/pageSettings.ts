@@ -1,7 +1,7 @@
 interface TitleProps {
-	pageName: string,
+	(pageName: string): void
 }
 
-export const pageTitle = (pageName: string) => {
+export const pageTitle:TitleProps = (pageName) => {
 	document.title = `${pageName} @ Sell Stuff :: The Online Garage Sale`
 }

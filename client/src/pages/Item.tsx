@@ -1,6 +1,5 @@
 import { Add, Remove } from "@mui/icons-material"
-import { truncate } from "fs"
-import React, { FC, useEffect, useState } from "react"
+import React, { FC } from "react"
 import { pageTitle } from "../functions/common/pageSettings"
 
 interface ItemProps {
@@ -49,7 +48,7 @@ export const Item: FC<ItemProps> = ({title, display}) => {
 						<div className="item-price"></div>
 					</div>
 				</div>
-				<div className="item-image"><img src='https://toppng.com/uploads/preview/coming-soon-115233721348zjfnigegk.png' /></div>
+				<div className="item-image"><img src='https://toppng.com/uploads/preview/coming-soon-115233721348zjfnigegk.png' alt='product' /></div>
 			</div>
 			<div className="purchase-block">
 				<div className="quantity-selector">

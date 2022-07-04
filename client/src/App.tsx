@@ -5,6 +5,8 @@ import { Sidebar } from './components/Sidebar'
 import { Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Item } from './pages/Item'
+import { Cart } from './pages/Cart'
+import { Browse } from './pages/Browse'
 
 function App() {
   const renderLogo:()=>JSX.Element = () => {
@@ -13,7 +15,7 @@ function App() {
 
   const itemList = [
     {
-      name: 'jake'
+      name: 'Product 1'
     }
   ]
 
@@ -24,11 +26,13 @@ function App() {
         <div className="content-container">
         <Routes>
           <Route path='/sell-stuff' element={<Home title="Home" />} />
-          <Route path='/sell-stuff/item/*' element={<Item title="''" display={itemList[0]} />} />
+          <Route path='/sell-stuff/cart' element={<Cart title="My Cart" />} />
+          <Route path='/sell-stuff/browse' element={<Browse title="All Products" />} />
+          <Route path='/sell-stuff/item/:id' element={<Item title="''" display={itemList[0]} />} />
         </Routes>
         </div>
     </div>
   )
 }
 
-export default App;
+export default App
