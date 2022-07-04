@@ -6,19 +6,19 @@ export const QuickTools:FC = () => {
     const handleToolHide = () => {
 		console.log('clicked "Hide Tools"')
 		const box = document.getElementById('quick-tools')
+        box!.style.left = '200%'
 		box!.style.height = '0px'
 		box!.style.padding = '0px'
-		box!.style.opacity = '0'
+		// box!.style.opacity = '0'
 		box!.style.marginTop = '0px'
 		box!.style.marginBottom = '-1rem'
-		const hideHide = box!.children[box!.children.length - 1] as HTMLElement
-		const hideBox =	box!.children[box!.children.length - 2] as HTMLElement
-		hideHide.style.height = '0px'
-		hideHide.style.padding = '0px'
-		hideHide.style.opacity = '0'
-		hideBox.style.height = '0px'
-		hideBox.style.padding = '0px'
-		hideBox.style.opacity = '0'
+		// box!.style.overflow = 'hidden'
+		// const hideHide = box!.children[box!.children.length - 1] as HTMLElement
+		// const hideBox =	box!.children[box!.children.length - 2] as HTMLElement
+		// hideHide.style.height = '0px'
+		// hideHide.style.padding = '0px'
+		// hideBox.style.height = '0px'
+		// hideBox.style.padding = '0px'
 	}
 
 	const iconStyle = {
